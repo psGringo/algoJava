@@ -18,12 +18,19 @@ public class Main {
 
     }
 
+    /**
+     * if number was met we get previous count, else 0 to localCount
+     * then increment totalCount and return it back to the hashmap
+     *
+     * @param nums
+     * @return
+     */
     public static int numIdenticalPairsLinearSolution(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int totalount = 0;
         for (int i = 0; i < nums.length; i++) {
             Integer localCount = map.getOrDefault(nums[i], 0);
-            totalount += localCount;
+            totalount += localCount; // met again
             map.put(nums[i], ++localCount);
         }
 
