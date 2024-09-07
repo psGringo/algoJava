@@ -12,6 +12,12 @@ public class Main {
         System.out.println("Maximum altitude is " + max);
     }
 
+    /**
+     * hint: nextAltitude = current altitude + gain
+     *
+     * @param gain
+     * @return
+     */
     public static int largestAltitude(int[] gain) {
 
         if (gain.length == 0) {
