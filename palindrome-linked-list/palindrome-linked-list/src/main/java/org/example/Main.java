@@ -8,12 +8,35 @@ import java.util.List;
  * https://leetcode.com/problems/palindrome-linked-list/description/
  */
 public class Main {
+
+    private ListNode curr;
+
     public static void main(String[] args) {
         System.out.println(5/2);
-        isPalindrome(new ListNode());
+        isPalindromeExtractToStrings(new ListNode());
     }
 
-    public static boolean isPalindrome(ListNode head) {
+    public boolean isPalindromeRecursive(ListNode head) {
+        curr = head;
+        return isPalindromeDoRecursive(curr);
+    }
+
+
+    public boolean isPalindromeDoRecursive(ListNode head) {
+
+        if (head == null) {
+            return true;
+        }
+        // head is going until the end of the list
+        var res = isPalindromeDoRecursive(head.next) && head.val == curr.val;
+
+        // after floating up starting shifting from initial head to the next nodes and compare them
+        curr = curr.next;
+        return res;
+    }
+
+
+    public static boolean isPalindromeExtractToStrings(ListNode head) {
         if (head.next == null) {
             return true;
         }
