@@ -1,60 +1,70 @@
 package org.example;
 
 
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * https://leetcode.com/problems/next-greater-node-in-linked-list
  */
 public class Main {
     public static void main(String[] args) {
-        nextLargerNodes(null);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(7);
+        list.add(5);
+        list.add(1);
+        list.add(9);
+        list.add(2);
+        list.add(5);
+        list.add(1);
+
+        ListNode head = new ListNode(list.get(0));
+        ListNode curr = head;
+        for (int i = 1; i < list.size(); i++) {
+            curr.next = new ListNode(list.get(i));
+            curr = curr.next;
+        }
+
+        nextLargerNodes(head);
     }
 
     public static int[] nextLargerNodes(ListNode head) {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(1);
-        list.add(5);
-
-        Stack<Integer> s = new Stack<>();
-//        ListNode curr = head;
-//        int count = 0;
-//        while (curr != null) {
-//            count++;
-//            list.add(curr.val);
-//            curr = curr.next;
-//        }
-        int ans[] = new int[list.size()];
-        for (int i = list.size() - 1; i >= 0; i--) {
-//            while (!s.isEmpty() && list.get(i) > s.peek()) {
-//                s.pop();
-//            }
-//            if (s.isEmpty()) {
-//                ans[i] = 0;
-//            } else {
-//                ans[i] = s.peek();
-//            }
-            s.push(list.get(i));
+        List<Integer> list = new ArrayList<>();
+        head = reverseList(head);
+        Stack<Integer> stack = new Stack<>();
+        while (head != null) {
+            while (!stack.isEmpty() && stack.peek() <= head.val) {
+                stack.pop();
+            }
+            if (stack.isEmpty()) {
+                stack.push(head.val);
+                list.add(0);
+            } else {
+                list.add(stack.peek());
+                stack.push(head.val);
+            }
+            head = head.next;
         }
-        return ans;
 
-
-//        Stack<Integer> s = new Stack<>();
-//        ListNode q1 = head;
-//        while (q1 != null) {
-//            list.add(q1.val);
-//            q1 = q1.next;
-//        }
-//        int result[] = new int[list.size()];
-//        for (int i = 0; i < list.size(); i++) {
-//            while (!s.isEmpty() && list.get(i) > list.get(s.peek())) {
-//                result[s.pop()] = list.get(i);
-//            }
-//            s.push(i);
-//        }
-//        return result;
+        List<Integer> reversedList = list.subList(0, list.size());
+        Collections.reverse(reversedList);
+        Integer[] res = reversedList.toArray(new Integer[list.size()]);
+        return Arrays.stream(res).mapToInt(Integer::intValue).toArray();
     }
+
+
+    public static ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
+    }
+
 
 }
