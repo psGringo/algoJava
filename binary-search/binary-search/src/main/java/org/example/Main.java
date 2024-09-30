@@ -13,9 +13,9 @@ public class Main {
         if (arr[mid] == value) {
             return mid;
         } else if (arr[mid] < value) {
-            return binarySearchRecursive(arr, mid, hi, value);
+            return binarySearchRecursive(arr, mid + 1, hi, value);
         } else if (arr[mid] > value) {
-            return binarySearchRecursive(arr, lo, mid, value);
+            return binarySearchRecursive(arr, lo, mid - 1, value);
         }
         return -1;
     }
