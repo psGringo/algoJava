@@ -48,7 +48,6 @@ public class Main {
     }
 
 
-
     private static int doFindPeakElement(int[] nums) {
         int i = 0;
         while (i + 2 < nums.length) {
