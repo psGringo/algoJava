@@ -3,27 +3,23 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int res1 = factorialRecursive(3);
-        int res2 = factorialIterative(3);
+        int res1 = factorialRecursive(10);
+        int res2 = factorialIterative(10);
     }
 
     private static int factorialRecursive(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-        return n * factorialRecursive(n - 1);
+        return n <= 1 ? 1 : n * factorialRecursive(n - 1);
     }
 
     private static int factorialIterative(int n) {
-        if (n <= 1) {
-            return 1;
-        }
-
-        int res = 1;
+        int res = 0;
         for (int i = 1; i <= n; i++) {
-            res *= i;
+            if (i == 1) {
+                res += 1;
+            } else {
+                res = i * res;
+            }
         }
-
         return res;
     }
 }
