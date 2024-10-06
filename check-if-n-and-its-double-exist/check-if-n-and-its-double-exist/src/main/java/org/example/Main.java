@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
+ * [ARRAYS, BINARY SEARCH, HASHSET]
  * https://leetcode.com/problems/check-if-n-and-its-double-exist/
  */
 public class Main {
