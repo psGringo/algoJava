@@ -3,6 +3,9 @@ package org.example;
 
 import java.util.Stack;
 
+/**
+ * https://leetcode.com/problems/remove-nodes-from-linked-list/description/
+ */
 public class Main {
     public static void main(String[] args) {
 
