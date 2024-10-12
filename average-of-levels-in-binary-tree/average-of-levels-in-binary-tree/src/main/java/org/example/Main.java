@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ * [BFS in Binary Tree]
+ * bright example of bfs in trees
  * https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
  */
 public class Main {
