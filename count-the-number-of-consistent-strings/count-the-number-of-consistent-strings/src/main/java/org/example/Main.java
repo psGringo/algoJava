@@ -3,8 +3,10 @@ package org.example;
 
 import java.util.HashSet;
 
+
 /**
- * https://leetcode.com/problems/count-the-number-of-consistent-strings/description/
+ * 1684. Count the Number of Consistent Strings
+ *  https://leetcode.com/problems/count-the-number-of-consistent-strings/description/
  */
 public class Main {
     public static void main(String[] args) {
