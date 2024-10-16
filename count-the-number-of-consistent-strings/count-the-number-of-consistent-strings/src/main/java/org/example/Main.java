@@ -10,7 +10,7 @@ import java.util.HashSet;
  */
 public class Main {
     public static void main(String[] args) {
-        var words = new String[]{"n", "eeitfns", "eqqqsfs", "i", "feniqis", "lhoa", "yqyitei", "sqtn", "kug", "z", "neqqis"};
+        var words = new String[]{"n", "eeitfns", "eqqqsfs", "i", "feniqis", "lhoa", "yqyitei", "sqtn", "kug", "z", "neqqi s"};
         countConsistentStrings("fstqyienx", words);
     }
 
