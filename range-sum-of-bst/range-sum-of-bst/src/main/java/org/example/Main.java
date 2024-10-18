@@ -17,25 +17,29 @@ public class Main {
             return 0;
         }
         List<Integer> list = new ArrayList<>();
-        doRangeSumBST(root, low, high, list);
-        int sum = 0;
-        for (int i = 0; i < list.size(); i++) {
-            sum += list.get(i);
-        }
-        return sum;
+        return doRangeSumBST(root, low, high);
     }
 
-    public void doRangeSumBST(TreeNode node, int low, int high, List<Integer> sum) {
+    public int doRangeSumBST(TreeNode node, int low, int high) {
         if (node == null) {
-            return;
+            return 0;
         }
+
+        int sum = 0;
 
         if (node.val >= low && node.val <= high) {
-            sum.add(node.val);
+            sum += node.val;
         }
 
-        doRangeSumBST(node.left, low, high, sum);
-        doRangeSumBST(node.right, low, high, sum);
+        if (node.val >= low) {
+            sum += doRangeSumBST(node.left, low, high);
+        }
+
+        if (node.val <= high) {
+            sum += doRangeSumBST(node.right, low, high);
+        }
+
+        return sum;
     }
 
 }
