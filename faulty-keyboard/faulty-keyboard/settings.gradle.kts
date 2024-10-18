@@ -1,0 +1,2 @@
+rootProject.name = "faulty-keyboard"
+
