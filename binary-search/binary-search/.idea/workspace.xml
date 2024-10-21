@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b3d57d9-a564-41f4-a9b9-b64ca79532c6" name="Changes" comment="[BINARYSEARCH] 704. Binary Search">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="1b3d57d9-a564-41f4-a9b9-b64ca79532c6" name="Changes" comment="[BINARYSEARCH] 704. Binary Search&#10;https://junhaow.com/lc/notes/binary-search-template-notes.html" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729168335808</updated>
       <workItem from="1729168336826" duration="1635000" />
-      <workItem from="1729435152375" duration="6433000" />
+      <workItem from="1729435152375" duration="6759000" />
     </task>
     <task id="LOCAL-00001" summary="[BINARYSEARCH] 704. Binary Search">
       <option name="closed" value="true" />
@@ -72,7 +68,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729182368210</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[BINARYSEARCH] 704. Binary Search&#10;https://junhaow.com/lc/notes/binary-search-template-notes.html">
+      <option name="closed" value="true" />
+      <created>1729505299115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729505299115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +108,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[HASHMAP] 2325. Decode the Message" />
     <MESSAGE value="[BINARYSEARCH] 704. Binary Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="[BINARYSEARCH] 704. Binary Search" />
+    <MESSAGE value="[BINARYSEARCH] 704. Binary Search&#10;https://junhaow.com/lc/notes/binary-search-template-notes.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BINARYSEARCH] 704. Binary Search&#10;https://junhaow.com/lc/notes/binary-search-template-notes.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -138,6 +143,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>24</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
