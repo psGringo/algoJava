@@ -2,10 +2,10 @@ package org.example;
 
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 
 /**
+ * 1636. Sort Array by Increasing Frequency
  * https://leetcode.com/problems/sort-array-by-increasing-frequency/
  */
 public class Main {
@@ -20,16 +20,13 @@ public class Main {
         }
         Integer[] numsObjects = Arrays.stream(nums).boxed().toArray(Integer[]::new);
         Arrays.sort(numsObjects, (x, y) -> {
-          if (!map.get(x).equals(map.get(y))) {
-              return map.get(x) - map.get(y);
-          } else {
-              return y - x;
-          }
+            if (!map.get(x).equals(map.get(y))) {
+                return map.get(x) - map.get(y);
+            } else {
+                return y - x;
+            }
         });
         return Arrays.stream(numsObjects).mapToInt(i -> i).toArray();
     }
 
-}
-
-record Num(int value, int frequency) {
 }
