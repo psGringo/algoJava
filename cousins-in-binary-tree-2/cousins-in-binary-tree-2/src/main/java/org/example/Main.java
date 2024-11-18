@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- *
+ * hashmap approach, not very effective here
  *
  * https://leetcode.com/problems/cousins-in-binary-tree/description/
  */
