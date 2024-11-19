@@ -6,10 +6,24 @@ package org.example;
  */
 public class Main {
     public static void main(String[] args) {
+        int[][] points = {{1, 1}, {3, 4}, {-1, 0}};
 
+        minTimeToVisitAllPoints(points);
     }
 
-    public int minTimeToVisitAllPoints(int[][] points) {
-    // TODO... Move mainly by diagonal will lead to minimal time
+    public static int minTimeToVisitAllPoints(int[][] points) {
+        int time = 0;
+        for (int i = 1; i < points.length; i++) {
+            int rest = 0;
+            int diffX = Math.abs(points[i][0] - points[i - 1][0]);
+            int diffY = Math.abs(points[i][1] - points[i - 1][1]);
+            int diagonalTime = Math.min(diffX, diffY);
+            if (diffX != diffY) {
+                rest = Math.abs(diffX - diffY);
+            }
+            time += diagonalTime + rest;
+        }
+        return time;
     }
+
 }
