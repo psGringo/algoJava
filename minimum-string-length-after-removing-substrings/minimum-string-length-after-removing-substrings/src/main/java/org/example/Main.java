@@ -4,6 +4,8 @@ package org.example;
 import java.util.Stack;
 
 /**
+ * Solution with contains and replaceAll
+ *
  * https://leetcode.com/problems/minimum-string-length-after-removing-substrings/description/
  */
 public class Main {
