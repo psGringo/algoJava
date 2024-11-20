@@ -4,6 +4,8 @@ package org.example;
 import java.util.Arrays;
 
 /**
+ * comparator approach
+ *
  * https://leetcode.com/problems/sort-array-by-parity/description/
  */
 public class Main {
