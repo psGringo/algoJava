@@ -1,6 +1,9 @@
 package org.example;
 
 
+/**
+ * https://leetcode.com/problems/k-th-smallest-prime-fraction/description/
+ */
 public class Main {
     public static void main(String[] args) {
         //var res = kthSmallestPrimeFraction(new int[]{1, 29, 47}, 1);
