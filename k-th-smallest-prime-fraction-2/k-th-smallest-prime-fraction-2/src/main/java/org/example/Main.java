@@ -30,21 +30,22 @@ public class Main {
         int n = arr.length;
 
         int i = 0;
-        int count = 0;
+        int cuntSmallerFractions = 0;
         int num = arr[0];
         int den = arr[n - 1];
 
         for (int j = 1; j < n; j++) {
             while (arr[i] * 1.0 / arr[j] <=  target) {
-                i++;
+                i++; // after i, more than target
             }
-            count += i;
+            cuntSmallerFractions += i; //??
 
+            // if smallest fraction more then num, den, than update it
             if (i > 0 && arr[i - 1] * 1.0 / arr[j]  > num * 1.0 / den) {
                 num = arr[i - 1];
                 den = arr[j];
             }
         }
-        return new int[]{count, num, den};
+        return new int[]{cuntSmallerFractions, num, den};
     }
 }

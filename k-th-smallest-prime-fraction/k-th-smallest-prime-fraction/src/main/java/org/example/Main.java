@@ -14,9 +14,9 @@ public class Main {
     public static int[] kthSmallestPrimeFraction(int[] arr, int k) {
         PriorityQueue<NumInfo> pq = new PriorityQueue<>((x, y) -> {
             if (x.fraction() > y.fraction()) {
-                return 1;
-            } else if (x.fraction() < y.fraction()) {
                 return -1;
+            } else if (x.fraction() < y.fraction()) {
+                return 1;
             }
             return 0;
         }
@@ -24,17 +24,19 @@ public class Main {
         );
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                pq.offer(new NumInfo(i, j, (arr[i] * 1.0 / arr[j])));
+                var numInfo = new NumInfo(i, j, (arr[i] * 1.0 / arr[j]));
+                if (pq.size() < k) {
+                    pq.offer(numInfo);
+                } else if (pq.peek().fraction() > numInfo.fraction()) {
+                    pq.poll();
+                    pq.offer(numInfo);
+                }
             }
         }
 
-        NumInfo numInfo = null;
-        while (k != 0) {
-            numInfo = pq.poll();
-            k--;
-        }
+        var resNumInfo = pq.peek();
 
-        return new int[]{arr[numInfo.i()], arr[numInfo.j()]};
+        return new int[]{arr[resNumInfo.i()], arr[resNumInfo.j()]};
     }
 }
 
