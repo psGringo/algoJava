@@ -14,6 +14,7 @@ public class Main {
         int j = colors.length - 1;
         int leftDifferentColorIndex = -1;
         int rightDifferentColorIndex = -1;
+
         while (true) {
             i++;
             if (i < colors.length) {
