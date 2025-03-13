@@ -6,6 +6,15 @@ public class Main {
 
     }
 
+
+//    Why Does This Work?
+//    XOR has a property:
+//    𝑥 ^ x = 0
+//
+//    So, when we apply XOR between consecutive elements of pref[], the previous prefix cancels out, leaving us with arr[i].
+
+
+
     public int[] findArray(int[] pref) {
          int[] result = new int[pref.length];
          result[0] = pref[0];
