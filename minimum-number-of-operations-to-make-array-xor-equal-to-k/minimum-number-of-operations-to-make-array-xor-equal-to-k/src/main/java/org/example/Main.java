@@ -18,7 +18,7 @@ public class Main {
      *
      *
      * @param nums
-     * @param k
+     * @param kit
      * @return
      */
     public int minOperations(int[] nums, int k) {
