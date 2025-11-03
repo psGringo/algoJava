@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.HashMap;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -10,6 +12,7 @@ public class Main {
 
 
     public static int matrixScore(int[][] grid) {
+        HashMap<String, String> m = new HashMap<>();
         // hrz, if first number is 0 then flip, 1000 > 0001 in bin
         // vrt, if most of column nums 0, then flip
         for (int rowIndex = 0; rowIndex < grid.length; rowIndex++) {
