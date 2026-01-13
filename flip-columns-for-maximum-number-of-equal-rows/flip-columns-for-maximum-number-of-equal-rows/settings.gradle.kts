@@ -1,0 +1,2 @@
+rootProject.name = "flip-columns-for-maximum-number-of-equal-rows"
+
