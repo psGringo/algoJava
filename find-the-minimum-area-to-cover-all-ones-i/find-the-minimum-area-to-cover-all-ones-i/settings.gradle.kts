@@ -1,0 +1,2 @@
+rootProject.name = "find-the-minimum-area-to-cover-all-ones-i"
+
